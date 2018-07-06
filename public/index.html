@@ -24,7 +24,7 @@
     <input v-model="message">
 
     <ul>
-      <li v-for="review in reviews">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
+      <li v-for="review in reviews" v-if="isPositive(review)">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
     </ul>
 
 

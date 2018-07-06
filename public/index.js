@@ -17,7 +17,7 @@ var HomePage = {
           reviewer: "Jenn"
         },
         {
-          text: "Vue.js is just okay.",
+          text: "Vue.js is bad.",
           rating: 3,
           reviewer: "Jaron"
         },
@@ -40,6 +40,10 @@ var HomePage = {
         reviewer: this.newReview.reviewer
       }
       this.reviews.push(newReviewInfo);
+    },
+    isPositive: function(currentReview) {
+      // check to see if the word bad is in currentReviews text
+      return currentReview.text.indexOf('bad') === -1;
     }
   },
   computed: {}
