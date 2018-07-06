@@ -27,6 +27,17 @@
       <li v-for="review in reviews">{{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}</li>
     </ul>
 
+
+    <h3>New Review Form:</h3>
+    <div>
+      Review Text: <input v-model="newReview.text">
+      Review Rating: <input v-model="newReview.rating">
+      Your Name: <input v-model="newReview.reviewer">
+      <button v-on:click="addReview()">Add Review</button>
+    </div>
+
+    <p>newReview: {{ newReview }}</p>
+
   </div>
 </template>
 

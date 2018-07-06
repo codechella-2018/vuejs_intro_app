@@ -26,11 +26,22 @@ var HomePage = {
           rating: 4,
           reviewer: "Asher"
         }
-      ]
+      ],
+      newReview: {}
     };
   },
   created: function() {},
-  methods: {},
+  methods: {
+    addReview: function() {
+      // create a new review object, then push it into reivews array
+      var newReviewInfo = {
+        text: this.newReview.text,
+        rating: this.newReview.rating,
+        reviewer: this.newReview.reviewer
+      }
+      this.reviews.push(newReviewInfo);
+    }
+  },
   computed: {}
 };
 
